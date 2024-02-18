@@ -1,9 +1,8 @@
-
-
 const seats = document.getElementsByClassName('addSeat');
 const seatCountNumber = getId('seat-count');
 const maxSeats = 4;
 let totalPrice = 0;
+
 
 for (const seat of seats) {
     seat.addEventListener('click', function () {
@@ -40,7 +39,7 @@ for (const seat of seats) {
                 getId('seats-left').innerText--;
                 if (seatCount + 1 === maxSeats) {
                     disableSeats();
-                    alert('You are about to reach the maximum number of purchaseable seats.');
+                    // alert('You are about to reach the maximum number of purchaseable seats.');
                 }
 
                 // calculate grand total
@@ -56,11 +55,28 @@ for (const seat of seats) {
             const seatContainer = getId('seat-container');
             const listContainer = seatContainer.lastElementChild;
             seatContainer.removeChild(listContainer);
+            // subtract the total price when deselect
+            const deselectedPrice = parseInt(listContainer.querySelector('p:last-child').innerText);
+            totalPrice -= deselectedPrice;
+            getId('total-price').innerText = totalPrice;
+
         }
     })
 }
 
+// Apply coupon discount 
+const couponInput = document.getElementById('coupon-input');
+const applyCouponButton = document.getElementById('apply-coupon');
+const grandTotalSection = document.getElementById('grand-total');
 
-
-
-
+applyCouponButton.addEventListener('click', function () {
+    const couponCode = couponInput.value;
+    let discount = 0;
+    if (couponCode === "NEW15") {
+        discount = totalPrice * 0.15; // 15% discount
+    } else if (couponCode === "Couple 20") {
+        discount = totalPrice * 0.20; // 20% discount
+    }
+    const discountedTotal = totalPrice - discount;
+    grandTotalSection.innerText = discountedTotal;
+});
