@@ -3,6 +3,7 @@
 const seats = document.getElementsByClassName('addSeat');
 const seatCountNumber = getId('seat-count');
 const maxSeats = 4;
+let totalPrice = 0;
 
 for (const seat of seats) {
     seat.addEventListener('click', function () {
@@ -13,7 +14,7 @@ for (const seat of seats) {
                 seatCountNumber.innerText = seatCount + 1;
                 // getting the selected seats info
                 const seatContainer = getId('seat-container');
-                // flex the list container (thanks gias bhai for the session, it helped in this part :))
+                // flex the list container
                 const listContainer = document.createElement('li');
                 listContainer.style.display = 'flex';
                 listContainer.style.justifyContent = 'space-between';
@@ -41,6 +42,10 @@ for (const seat of seats) {
                     disableSeats();
                     alert('You are about to reach the maximum number of purchaseable seats.');
                 }
+
+                // calculate grand total
+                totalPrice += parseInt(seatPrice.innerText);
+                getId('total-price').innerText = totalPrice;
             }
 
         } else {
