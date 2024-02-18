@@ -14,15 +14,16 @@ for (const seat of seats) {
         if (this.checked) {
             if (seatCount < maxSeats) {
                 seatCountNumber.innerText = seatCount + 1;
+                getId('seats-left').innerText--;
                 if (seatCount + 1 === maxSeats) {
                     disableSeats();
-                    alert('You are about to reach the maximum number of seats.');
+                    alert('You are about to reach the maximum number of purchaseable seats.');
                 }
             }
         } else {
             seatCountNumber.innerText = seatCount - 1;
+            getId('seats-left').innerText++;
             enableSeats();
-
         }
     })
 }
