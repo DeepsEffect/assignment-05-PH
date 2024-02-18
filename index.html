@@ -64,7 +64,7 @@
                         <h1 class="mb-5 text-2xl lg:text-6xl font-extrabold text-white">End-to-End Travel with <span
                                 class="color-green">Next Paribahan</span></h1>
                         <p class="mb-5 lg:text-lg font-normal max-w-2xl mx-auto">Your gateway to seamless travel experiences begins here. Book your tickets with Next Paribahan and enjoy the convenience of integrated testing for a stress-free journey.</p>
-                        <button class="btn color-black font-bold text-xl bg-[#1DD100] border-none">Buy Tickets</button>
+                        <button onclick="buyTickets()" class="btn color-black font-bold text-xl bg-[#1DD100] border-none">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
             </div>
         </section>
         <!-- select your seat section -->
-        <section
+        <section id="select-seat"
             class="container mx-auto bg-white rounded-2xl shadow-xl mt-6 lg:p-10 flex flex-col lg:flex-row justify-between ">
             <!-- div 1 -->
             <div class=" w-full border-r-2 border-dashed p-5 color-black space-y-5">
@@ -180,109 +180,109 @@
                     </div>
                 </div>
                 <div class="flex justify-end">
-                    <button class="btn"><img src="icons/steering.svg" alt=""></button>
+                    <button onclick="driver()" class="btn"><img src="icons/steering.svg" alt=""></button>
                 </div>
                 <!-- bus seats -->
-                <div class="space-y-6 font-semibold color-gray">
+                <div id="seats" class="space-y-6 font-semibold color-gray">
                     <!-- row 1 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>A</p>
                         </div>
-                        <div><input type="checkbox" aria-label="A1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="A3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="A3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="A4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="A1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="A3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="A3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="A4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 2 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>B</p>
                         </div>
-                        <div><input type="checkbox" aria-label="B1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="B3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="B3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="B4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="B1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="B3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="B3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="B4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 3 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>C</p>
                         </div>
-                        <div><input type="checkbox" aria-label="C1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="C3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="C3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="C4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="C1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="C3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="C3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="C4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 4 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>D</p>
                         </div>
-                        <div><input type="checkbox" aria-label="D1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="D3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="D3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="D4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="D1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="D3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="D3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="D4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 5 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>E</p>
                         </div>
-                        <div><input type="checkbox" aria-label="E1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="E3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="E3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="E4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="E1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="E3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="E3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="E4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 6 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>F</p>
                         </div>
-                        <div><input type="checkbox" aria-label="F1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="F3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="F3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="F4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="F1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="F3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="F3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="F4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 7 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>G</p>
                         </div>
-                        <div><input type="checkbox" aria-label="G1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="G3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="G3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="G4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="G1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="G3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="G3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="G4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 8 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>H</p>
                         </div>
-                        <div><input type="checkbox" aria-label="H1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="H3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="H3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="H4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="H1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="H3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="H3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="H4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 9 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>I</p>
                         </div>
-                        <div><input type="checkbox" aria-label="I1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="I3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="I3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="I4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="I1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="I3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="I3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="I4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                     <!-- row 10 -->
                     <div class="flex justify-between items-center text-center">
                         <div>
                             <p>J</p>
                         </div>
-                        <div><input type="checkbox" aria-label="J1" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="J3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="J3" class="btn lg:px-8" /></div>
-                        <div><input type="checkbox" aria-label="J4" class="btn lg:px-8" /></div>
+                        <div><input type="checkbox" aria-label="J1" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="J3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="J3" class="btn lg:px-8 addSeat" /></div>
+                        <div><input type="checkbox" aria-label="J4" class="btn lg:px-8 addSeat" /></div>
                     </div>
                 </div>
             </div>
@@ -294,7 +294,7 @@
                 <!-- grand total  -->
                 <div class="bg-[#F7F8F8] font-inter text-lg font-semibold color-black space-y-4 p-4">
                     <div class="flex justify-between pb-4 border-b-2 border-dashed p-5 ">
-                        <h2>Seat <span class="bg-[#1DD100] px-2 rounded-lg text-white font-semibold">2</span></h2>
+                        <h2>Seat <span id="seat-count" class="bg-[#1DD100] px-2 rounded-lg text-white font-semibold">0</span></h2>
                         <h2>Class</h2>
                         <h2>Price</h2>
                     </div>
