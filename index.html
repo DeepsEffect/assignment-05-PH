@@ -63,8 +63,11 @@
                     <div class="max-w-3xl">
                         <h1 class="mb-5 text-2xl lg:text-6xl font-extrabold text-white">End-to-End Travel with <span
                                 class="color-green">Next Paribahan</span></h1>
-                        <p class="mb-5 lg:text-lg font-normal max-w-2xl mx-auto">Your gateway to seamless travel experiences begins here. Book your tickets with Next Paribahan and enjoy the convenience of integrated testing for a stress-free journey.</p>
-                        <button onclick="buyTickets()" class="btn color-black font-bold text-xl bg-[#1DD100] border-none">Buy Tickets</button>
+                        <p class="mb-5 lg:text-lg font-normal max-w-2xl mx-auto">Your gateway to seamless travel
+                            experiences begins here. Book your tickets with Next Paribahan and enjoy the convenience of
+                            integrated testing for a stress-free journey.</p>
+                        <button onclick="buyTickets()"
+                            class="btn color-black font-bold text-xl bg-[#1DD100] border-none">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -112,7 +115,9 @@
         <section class="container mx-auto">
             <div class="text-center mt-10 lg:mt-20 max-w-3xl mx-auto">
                 <h2 class="color-black text-2xl lg:text-4xl font-bold mb-6">Next Paribahan</h2>
-                <pc class="font-inter text-lg font-normal color-gray">Book your bus tickets hassle-free with Next Paribahan. Our platform offers easy browsing, seat selection, and secure payments. Plus, run tests seamlessly for a smooth booking experience.</p>
+                <pc class="font-inter text-lg font-normal color-gray">Book your bus tickets hassle-free with Next
+                    Paribahan. Our platform offers easy browsing, seat selection, and secure payments. Plus, run tests
+                    seamlessly for a smooth booking experience.</p>
             </div>
 
             <!-- paribahan card -->
@@ -294,12 +299,13 @@
                 <!-- grand total  -->
                 <div class="bg-[#F7F8F8] font-inter text-lg font-semibold color-black space-y-4 p-4">
                     <div class="flex justify-between pb-4 border-b-2 border-dashed p-5 ">
-                        <h2>Seat <span id="seat-count" class="bg-[#1DD100] px-2 rounded-lg text-white font-semibold">0</span></h2>
+                        <h2>Seat <span id="seat-count"
+                                class="bg-[#1DD100] px-2 rounded-lg text-white font-semibold">0</span></h2>
                         <h2>Class</h2>
                         <h2>Price</h2>
                     </div>
                     <div id="seat-container" class=" justify-between color-gray text-normal font-medium ">
-                       
+
                     </div>
                     <!-- total price -->
                     <div class="flex justify-between">
@@ -308,7 +314,8 @@
                     </div>
                     <!-- apply coupon -->
                     <div id="coupon-container" class="flex gap-2 texx-sm font-normal">
-                        <input id="coupon-input" type="coupon" placeholder="got a coupon?" class="input w-full border-none outline-none">
+                        <input id="coupon-input" type="coupon" placeholder="got a coupon?"
+                            class="input w-full border-none outline-none">
                         <button id="apply-coupon" class="btn bg-[#1DD100] text-white">Apply</button>
                     </div>
                     <!-- grand total -->
@@ -331,7 +338,7 @@
                         <input type="text" class="grow" placeholder="Enter Your Email" />
                     </label>
                     <!-- phone -->
-                    <h2  class="color-black text-normal font-semibold">Phone Number*</h2>
+                    <h2 class="color-black text-normal font-semibold">Phone Number*</h2>
                     <label class="input input-bordered flex items-center gap-2 font-inter">
                         <input id="input-phone" type="number" class="grow" placeholder="Enter Your Phone Number" />
                     </label>
@@ -343,11 +350,31 @@
                 </div>
             </div>
         </section>
+        <!-- modal section -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_1" class="modal font-inter">
+                <div class="modal-box flex flex-col items-center justify-center gap-y-4">
+                    <img src="icons/success.svg" alt="">
+                    <h3 class="font-bold text-xl color-green">SUCCESS!</h3>
+                    <p class=" text-center"> <span class="color-black text-xl font-medium mb-4">Thank you for Booking Our Bus Seats. 
+                        We are working hard to find the best service and deals for you.</span> <br> 
+                        Shortly you will find a confirmation in your email.</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn w-full bg-[#27AE60] text-white font-medium text-lg">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
     </main>
-    <footer class="footer items-center mt-12 lg:mt-24 p-10 mx-auto justify-evenly lg:gap-20 bg-neutral text-neutral-content bg-[#030712] font-inter min-h-72">
+    <footer
+        class="footer items-center mt-12 lg:mt-24 p-10 mx-auto justify-evenly lg:gap-20 bg-neutral text-neutral-content bg-[#030712] font-inter min-h-72">
         <div class="font-raleway text-white ">
             <h2 class="text-4xl font-bold">Next-Ticket</h2>
-            <p class="font-inter text-sm font-normal text-[#FFFFFFCC]">Next-Ticket is your digital platform for seamless daily commuting.</p>
+            <p class="font-inter text-sm font-normal text-[#FFFFFFCC]">Next-Ticket is your digital platform for seamless
+                daily commuting.</p>
         </div>
         <div>
             <h2 class="font-inter text-lg font-semibold text-white">Download our app</h2>
@@ -356,7 +383,7 @@
         <div>
             <p>@all rights reserved, Next-Ticket services limited.2024</p>
         </div>
-      </footer>
+    </footer>
     <script src="js/utilities.js"></script>
     <script src="js/script.js"></script>
 </body>

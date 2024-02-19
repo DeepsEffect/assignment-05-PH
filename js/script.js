@@ -2,7 +2,6 @@ const seats = document.getElementsByClassName('addSeat');
 const seatCountNumber = getId('seat-count');
 const maxSeats = 4;
 let totalPrice = 0;
-let currentSeatCount = 0;
 
 
 for (const seat of seats) {
@@ -12,13 +11,15 @@ for (const seat of seats) {
         if (this.checked) {
             if (seatCount < maxSeats) {
                 seatCountNumber.innerText = seatCount + 1;
-                currentSeatCount = seatCount + 1;
                 // getting the selected seats info
                 const seatContainer = getId('seat-container');
                 // flex the list container
                 const listContainer = document.createElement('li');
                 listContainer.style.display = 'flex';
                 listContainer.style.justifyContent = 'space-between';
+                listContainer.style.paddingLeft = '30px';
+                listContainer.style.paddingRight = '30px';
+
                 // create 4 new elements
                 const seatName = document.createElement('p');
                 const seatClass = document.createElement('p');
@@ -64,9 +65,9 @@ for (const seat of seats) {
 }
 
 // Apply coupon discount 
-const couponInput = document.getElementById('coupon-input');
-const applyCouponButton = document.getElementById('apply-coupon');
-const grandTotalSection = document.getElementById('grand-total');
+const couponInput = getId('coupon-input');
+const applyCouponButton = getId('apply-coupon');
+const grandTotalSection = getId('grand-total');
 
 applyCouponButton.addEventListener('click', function () {
     const couponCode = couponInput.value;
@@ -113,3 +114,9 @@ phoneNumber.addEventListener('input', nextButtonConditions);
 for (const seat of seats) {
     seat.addEventListener('click', nextButtonConditions);
 }
+
+// showing the modal when clicked next button
+const myModal = getId('my_modal_1');
+nextButton.addEventListener('click', function(){
+    myModal.showModal();
+});
