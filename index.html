@@ -307,14 +307,14 @@
                         <h2>BDT <span id="total-price"></span></h2>
                     </div>
                     <!-- apply coupon -->
-                    <div class="flex gap-2 texx-sm font-normal">
+                    <div id="coupon-container" class="flex gap-2 texx-sm font-normal">
                         <input id="coupon-input" type="coupon" placeholder="got a coupon?" class="input w-full border-none outline-none">
                         <button id="apply-coupon" class="btn bg-[#1DD100] text-white">Apply</button>
                     </div>
                     <!-- grand total -->
                     <div class="flex justify-between">
                         <h2>Grand Total</h2>
-                        <h2 id="grand-total">0</h2>
+                        <h2>BDT <span id="grand-total"></span></h2>
                     </div>
                 </div>
                 <!-- input div -->
@@ -331,12 +331,11 @@
                         <input type="text" class="grow" placeholder="Enter Your Email" />
                     </label>
                     <!-- phone -->
-                    <h2 class="color-black text-normal font-semibold">Phone</h2>
+                    <h2  class="color-black text-normal font-semibold">Phone Number*</h2>
                     <label class="input input-bordered flex items-center gap-2 font-inter">
-
-                        <input type="number" class="grow" placeholder="Enter Your Phone Number" />
+                        <input id="input-phone" type="number" class="grow" placeholder="Enter Your Phone Number" />
                     </label>
-                    <button class="btn w-full text-white font-bold bg-[#1DD100]">Next</button>
+                    <button id="next-btn" class="btn w-full text-white font-bold bg-[#1DD100]">Next</button>
                     <div class="flex justify-evenly underline">
                         <p>Terms and Conditions</p>
                         <p>Cancellation Policy</p>

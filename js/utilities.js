@@ -21,10 +21,6 @@ function enableSeats() {
     }
 }
 
-
-
-
-
 // hudai ekta alert lol
 function driver() {
     alert('can\'t seat in the drivers position bro');
