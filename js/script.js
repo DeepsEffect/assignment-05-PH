@@ -41,9 +41,10 @@ for (const seat of seats) {
                     // alert('You are about to reach the maximum number of purchaseable seats.');
                 }
 
-                // calculate grand total
+                // calculate total price
                 totalPrice += parseInt(seatPrice.innerText);
                 getId('total-price').innerText = totalPrice;
+                getId('grand-total').innerText = totalPrice;
             }
 
         } else {
@@ -57,6 +58,7 @@ for (const seat of seats) {
             // subtract the total price when deselect
             const deselectedPrice = parseInt(listContainer.querySelector('p:last-child').innerText);
             totalPrice -= deselectedPrice;
+            getId('grand-total').innerText -= deselectedPrice;
             getId('total-price').innerText = totalPrice;
 
         }
@@ -82,7 +84,7 @@ applyCouponButton.addEventListener('click', function () {
         alert('Invalid Coupon')
     }
     const discountedTotal = totalPrice - discount;
-    grandTotalSection.innerText = discountedTotal;
+    grandTotalSection.innerText = parseInt(discountedTotal);
 })
 
 // Passenger input section (if the phone number is filled and at least one seat is selected the next button appears)
