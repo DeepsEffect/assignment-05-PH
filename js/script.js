@@ -3,7 +3,6 @@ const seatCountNumber = getId('seat-count');
 const maxSeats = 4;
 let totalPrice = 0;
 
-
 for (const seat of seats) {
     seat.addEventListener('click', function () {
         const seatCount = parseInt(seatCountNumber.innerText);
@@ -96,19 +95,18 @@ function nextButtonConditions() {
     let seatSelected = false;
     // checking if the seat is  selected or not
     for (const seat of seats) {
-        if (seat.checked){
+        if (seat.checked) {
             seatSelected = true;
             break;
         }
     }
 
-    if (phoneNumberfilled && seatSelected){
+    if (phoneNumberfilled && seatSelected) {
         nextButton.disabled = false;
-    } else{
+    } else {
         nextButton.disabled = true;
-    }  
+    }
 }
-
 // event listener for phone number input and seat selection
 phoneNumber.addEventListener('input', nextButtonConditions);
 for (const seat of seats) {
@@ -117,6 +115,6 @@ for (const seat of seats) {
 
 // showing the modal when clicked next button
 const myModal = getId('my_modal_1');
-nextButton.addEventListener('click', function(){
+nextButton.addEventListener('click', function () {
     myModal.showModal();
 });
